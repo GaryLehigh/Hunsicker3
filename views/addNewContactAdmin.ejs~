@@ -23,7 +23,7 @@ $(document).ready(function() {
                                 if(result==true){
                   $("#c01").val($.cookie("FirstName"));
                   $("#c02").val($.cookie("LastName"));
-              
+              FirstChange();
                   $("#PhoneNumber1").val($.cookie("Phone1"));
                   $("#PhoneNumber2").val($.cookie("Phone2"));
                   $("#PhoneNumber3").val($.cookie("Phone3"));
@@ -123,7 +123,9 @@ else if($("#c04").val()=="" && phone.length<10){
 	$("#warning2").show();
     	event.preventDefault();
 	return;
-}else{
+}
+//else if($("#c04").)
+else{
 
     storeValues();
 }

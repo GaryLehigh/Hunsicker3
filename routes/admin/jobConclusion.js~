@@ -245,7 +245,7 @@ if(!req.isAuthenticated()) {
   console.log('6666666666666666666');
   						var message="";
 if(req.query.message==1){
-message="Job has been added successfully!";
+message="Job has been added successfull!";
 }
 else if(req.query.message==0){
 message="Failed to add this job!";

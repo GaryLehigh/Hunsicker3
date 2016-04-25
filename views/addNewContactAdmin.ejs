@@ -113,6 +113,8 @@ function submitContact(){
     $("#warning1").hide();
     $("#warning2").hide();
 var phone=$("#PhoneNumber1").val()+$("#PhoneNumber2").val()+$("#PhoneNumber3").val();
+    var inpObj4 = document.getElementById("cp04");
+
 if(($("#PhoneNumber1").val()=="" && $("#PhoneNumber2").val()=="" && $("#PhoneNumber3").val()=="" )&& $("#c04").val()==""){
 	$("#warning1").show();
     	event.preventDefault();
@@ -123,7 +125,12 @@ else if($("#c04").val()=="" && phone.length<10){
 	$("#warning2").show();
     	event.preventDefault();
 	return;
-}else{
+}
+else if(inpObj4.checkValidity() == false){
+    	event.preventDefault();
+	return;
+}
+else{
 
     storeValues();
 }
